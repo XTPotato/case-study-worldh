@@ -1,19 +1,10 @@
 import pandas as pd
 import numpy as np
-#import matplotlib.pyplot as plt
 import plotly.express as px
 import streamlit as st
-#from PIL import Image
 
 def r(x, y):
     return np.mean(((x - np.mean(x)) / np.std(x)) * ((y - np.mean(y)) / np.std(y)))
-
-#def abline(slope, intercept):
-#    """Plot a line from slope and intercept"""
-#    axes = plt.gca()
-#    x_vals = np.array(axes.get_xlim())
-#    y_vals = intercept + slope * x_vals
-#    plt.plot(x_vals, y_vals, color='black')
 
 st.sidebar.subheader('Table of contents')
 st.sidebar.write('1. ','<a href=#case-study-on-the-correlation-between-income-and-life-expectancy>Introduction</a>', unsafe_allow_html=True)
@@ -22,7 +13,6 @@ st.sidebar.write('3. ','<a href=#exploratory-data-analysis>Exploratory data anal
 st.sidebar.write('4. ','<a href=#performing-linear-regression-analysis>Linear regression analysis</a>', unsafe_allow_html=True)
 st.sidebar.write('5. ','<a href=#conclusion>Conclusion</a>', unsafe_allow_html=True)
 st.sidebar.write('6. ','<a href=#additional-resources>Additional resources</a>', unsafe_allow_html=True)
-#st.sidebar.write('2. ','<a href=></a>', unsafe_allow_html=True)
 
 st.title('Case study on the correlation between income and life expectancy')
 
@@ -161,17 +151,3 @@ pivoted = happy.pivot(index='Country name', columns='year', values=option4).rese
 fig5 = px.box(pivoted, pivoted.columns[1:], 'Country name', height=numberinput1*30+150, width=graphsize)'''
 st.code(code3, language='python')
 st.write('Through this case study, I experienced how to use data analysis to explore the relationships between variables in our world, and how the world can be quantified into numbers, as each feature of the world combines together to form our world. When I perform a linear regression analysis, I am only able to visualize a correlation between two variables, but the causal relationships are ignored because statistics cannot prove cause and effect. The two variables I was comparing in the case study definitely did not have a direct causal relationship, instead there must be several similar causes to both of them. Furthermore, the real world is still much more complex than if it were quantified into numbers, after all, there is only a limited type of numbers to quantify into. Although this case study is simpler than the real world because of the previously mentioned points, it still gives us certain amounts of insight to our world. Therefore, this case study still proves to be worth some value in terms of statistics, it reveals a simple correlation between income and life expectancy. ')
-# color_discrete_sequence=px.colors.qualitative.T10, width=graphsize, height=graphsize
-#'Life Ladder', 'Log GDP per capita', 'Social support', 'Healthy life expectancy at birth','Freedom to make life choices', 'Generosity', 'Perceptions of corruption'
-
-    # slider4 = st.text_input('Top amount')
-    # print(slider4)
-    # o = slider4
-    # success = False
-    # try:
-    #     value = slider4
-    #     int(value)
-    #     success = True
-    #     p = int(value)
-    # except:
-    #     st.error('oof')
