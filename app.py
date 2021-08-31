@@ -105,7 +105,7 @@ allgrouped = happy.groupby('Country name').mean().reset_index()
 
 graphsize = 600
 
-col1, col2 = st.beta_columns([3, 4])
+col1, col2 = st.columns([3, 4])
 with col1:
     option1 = st.selectbox('X axis',['Life Ladder', 'Log GDP per capita', 'Social support', 'Healthy life expectancy at birth','Freedom to make life choices', 'Generosity', 'Perceptions of corruption'])
     option2 = st.selectbox('Y axis',['Life Ladder', 'Log GDP per capita', 'Social support', 'Healthy life expectancy at birth','Freedom to make life choices', 'Generosity', 'Perceptions of corruption'])
@@ -119,7 +119,7 @@ st.subheader('Yearly progression box plot of statistics given by the original ta
 st.write('A box plot shows the rough distribution of the statistic, the two ends of the whiskers are the maximum and the minimum, the middle line is the median and the top and bottom of the box are the 75th percentile and the 25th percentile, hover over each box to display the exact numbers.')
 st.write('There is a significant lack of information for the year 2005, hence the huge distance between 2005 and 2006.')
 
-col3, col4 = st.beta_columns([3, 4])
+col3, col4 = st.columns([3, 4])
 with col3:
     option3 = st.selectbox('Statistic to compare', ['Life Ladder', 'Log GDP per capita', 'Social support', 'Healthy life expectancy at birth','Freedom to make life choices', 'Generosity', 'Perceptions of corruption'])
 
@@ -131,7 +131,7 @@ with col4:
 st.subheader('Box plot of countries and the statistic to compare, sorted by their median')
 st.write('A box plot shows the rough distribution of the statistic, the two ends of the whiskers are the maximum and the minimum, the middle line is the median and the top and bottom of the box are the 75th percentile and the 25th percentile, hover over each box to display the exact numbers.')
 
-col5, col6 = st.beta_columns([3, 4])
+col5, col6 = st.columns([3, 4])
 
 with col5:
     option4 = st.selectbox('Statistic to compare', ['Life Ladder', 'Log GDP per capita', 'Social support', 'Healthy life expectancy at birth','Freedom to make life choices', 'Generosity', 'Perceptions of corruption'], key='aaa')
